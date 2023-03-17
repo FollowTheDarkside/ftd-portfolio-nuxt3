@@ -46,6 +46,12 @@ jobs:
       #       echo "GITHUB_DEPLOYMENT_ENVIRONMENT=Netlify Preview" >> "${GITHUB_OUTPUT}"
       #     fi
 
+      - name: Print current directory and file list
+        run: |
+          pwd
+          ls -la
+          echo "-------------------------"
+
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
