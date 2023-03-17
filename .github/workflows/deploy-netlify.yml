@@ -37,21 +37,21 @@ jobs:
         # run: npm run generate
         # run: yarn build:prd
 
-      - name: Set GitHub Deployment Environment
-        id: github_deployment_environment
-        run: |
-          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
-            echo "GITHUB_DEPLOYMENT_ENVIRONMENT=Netlify prd" >> "${GITHUB_OUTPUT}"
-          else
-            echo "GITHUB_DEPLOYMENT_ENVIRONMENT=Netlify Preview" >> "${GITHUB_OUTPUT}"
-          fi
+      # - name: Set GitHub Deployment Environment
+      #   id: github_deployment_environment
+      #   run: |
+      #     if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+      #       echo "GITHUB_DEPLOYMENT_ENVIRONMENT=Netlify prd" >> "${GITHUB_OUTPUT}"
+      #     else
+      #       echo "GITHUB_DEPLOYMENT_ENVIRONMENT=Netlify Preview" >> "${GITHUB_OUTPUT}"
+      #     fi
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './output/public'
           production-branch: master
-          github-deployment-environment: ${{ steps.github_deployment_environment.outputs.GITHUB_DEPLOYMENT_ENVIRONMENT }}
+          # github-deployment-environment: ${{ steps.github_deployment_environment.outputs.GITHUB_DEPLOYMENT_ENVIRONMENT }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ github.event.head_commit.message || github.event.pull_request.title }}
           alias: deploy-preview-${{ github.event.number }}
