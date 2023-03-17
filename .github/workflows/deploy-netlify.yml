@@ -3,10 +3,10 @@ name: Deploy to Netlify
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 permissions:
   contents: write
