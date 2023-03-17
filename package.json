@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27968280.9739e4d",
+    "@nuxtjs/tailwindcss": "^6.3.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "daisyui": "^2.50.0",
+    "mitt": "^3.0.0",
+    "nuxt": "^3.1.2",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.58.0"
+  },
+  "dependencies": {
+    "three": "^0.149.0"
+  }
+}
