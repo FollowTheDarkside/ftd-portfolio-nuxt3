@@ -2,7 +2,6 @@
 <div class="">
     <div class="main-text w-5/6 md:w-1/2 2xl:w-1/3 mx-auto">
         <h1 class="text-3xl pt-5 text-center">ABOUT</h1>
-        <!-- at Center -->
         <div id="icon-area" >
             <!-- Simple icon & For opacity interaction -->
             <!-- <img 
@@ -33,18 +32,6 @@
             Naoyuki Hirasawa<br>
             Creative Coder / Visual Artist / Writer / BBOY
         </p>
-        <!-- at Left -->
-        <!-- <div >
-            <img 
-                class="w-1/2 md:w-1/2 my-5 rounded-lg"
-                src="~/assets/image/ftd-mirror.jpg" 
-                alt="ftd"
-            />
-        </div>
-        <p class="mb-16">
-            FTD a.k.a Naoyuki Hirasawa<br>
-            Creative Coder / Visual Artist / Writer / BBOY
-        </p> -->
         <h2 class="text-2xl">Biography</h2>
         <p class="my-5">
             FTD is a Kanagawa-based artist and bboy. 
@@ -63,7 +50,6 @@
         </p>
         <h2 class="text-2xl">Reel</h2>
         <div class="flex justify-center mt-5 mb-10">
-            <!-- <iframe class="rounded-lg" width="560" height="315" src="https://www.youtube.com/embed/4r089uitIDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
             <iframe class="rounded-lg w-full h-80" src="https://www.youtube.com/embed/4r089uitIDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <h2 class="text-2xl">Link</h2>
