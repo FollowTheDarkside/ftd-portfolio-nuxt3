@@ -22,10 +22,11 @@ jobs:
     steps:
       - name: Print current directory and file list
         run: |
+          cd ..
           pwd
           ls -la
           echo "-------------------------"
-          
+
       - name: Checkout repository of portfolio
         uses: actions/checkout@v2
 
@@ -61,7 +62,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: '../output/public'
+          publish-dir: './output/public'
           production-branch: master
           # github-deployment-environment: ${{ steps.github_deployment_environment.outputs.GITHUB_DEPLOYMENT_ENVIRONMENT }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
