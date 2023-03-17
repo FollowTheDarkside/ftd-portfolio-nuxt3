@@ -20,6 +20,12 @@ jobs:
     timeout-minutes: 10
 
     steps:
+      - name: Print current directory and file list
+        run: |
+          pwd
+          ls -la
+          echo "-------------------------"
+          
       - name: Checkout repository of portfolio
         uses: actions/checkout@v2
 
