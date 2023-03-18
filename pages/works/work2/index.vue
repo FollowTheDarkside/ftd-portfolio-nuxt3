@@ -11,15 +11,17 @@
             />
         </div>
         <p class="my-5">
-            At the opening of the STM32 Summit held in Shenzhen, China, a demo performance was conducted by DanceAI, 
-            which learned the motion data collected by ORPHE TRACK. 
-            In addition to identifying motions using AI, 
-            we also performed visualization (openFrameworks) using the features of the data used for deep learning.
+            At the opening of the STM32 Summit held in Shenzhen, China, 
+            a demonstration performance by DanceAI using ORPHE TRACK, a shoe-shaped wearable device, was held. 
+            In addition to real-time motion identification, 
+            motion data used for deep learning was mapped in 3D space using t-SNE, a dimensionality reduction algorithm, 
+            and visualized in conjunction with the performance using openFrameworks.
         </p>
         <p class="my-5">
-            中国深センにて開催されたSTM32 Summitのオープニングにて、
-            ORPHE TRACKにより収集されたモーションデータを学習したDanceAIによるデモパフォーマンスを実施。 
-            AIによる動作の識別に加え、深層学習に用いたデータの特徴量を用いたビジュアライズ（openFrameworks）も行いました。
+            中国深センにて開催されたSTM32 Summit のオープニングにて、 
+            靴型のウェアラブルデバイスであるORPHE TRACK を用いたDanceAI によるデモパフォーマンスを実施。
+            リアルタイムな動作の識別に加え、深層学習に用いたモーションデータを次元削減アルゴリズムのt-SNE で三次元空間にマッピングし、
+            openFrameworks を使ってパフォーマンスと連動したビジュアライズも行った。
         </p>
         <p class="m-5">
             <ul class="list-disc">
