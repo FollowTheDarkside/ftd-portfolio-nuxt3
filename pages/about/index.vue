@@ -46,7 +46,8 @@
             近年はプログラミングや機械学習の技術を用いた新しいビジュアル表現を模索中。
         </p>
         <p class="mb-10">
-            ポートフォリオ：<NuxtLink class="my-link" to="https://elite-amphibian-dde.notion.site/FTD-3bf5570278204a18b7d52bf519f3d1cb" target="_blank">詳細版</NuxtLink> / <NuxtLink class="my-link" to="https://note.com/hahaeatora/n/n2fac607bffbd" target="_blank">ライター版</NuxtLink>
+            <span class="text-sm">Related:</span><br>
+            <NuxtLink class="my-link" to="https://scrapbox.io/ftd-works-and-expt/" target="_blank">Other Works</NuxtLink> / <NuxtLink class="my-link" to="https://note.com/hahaeatora/n/n2fac607bffbd" target="_blank">ライター情報</NuxtLink> / <NuxtLink class="my-link" to="https://elite-amphibian-dde.notion.site/FTD-3bf5570278204a18b7d52bf519f3d1cb" target="_blank">経歴など</NuxtLink>
         </p>
         <h2 class="text-2xl">Reel</h2>
         <div class="flex justify-center mt-5 mb-10">
@@ -54,10 +55,10 @@
         </div>
         <h2 class="text-2xl">Link</h2>
         <p class="my-5">
-            SNS: <NuxtLink class="my-link" to="https://twitter.com/eatora22" target="_blank">Twitter</NuxtLink> / <NuxtLink class="my-link" to="https://www.instagram.com/followthedarkside/" target="_blank">Instagram</NuxtLink><br>
-            Video: <NuxtLink class="my-link" to="https://www.youtube.com/c/FTD22" target="_blank">YouTube</NuxtLink> / <NuxtLink class="my-link" to="https://vimeo.com/user118759981" target="_blank">Vimeo</NuxtLink><br>
-            Writing: <NuxtLink class="my-link" to="https://hahaeatora.hateblo.jp/" target="_blank">HatenaBlog</NuxtLink> / <NuxtLink class="my-link" to="https://note.com/hahaeatora/" target="_blank">note</NuxtLink> / <NuxtLink class="my-link" to="https://followthedarkside.medium.com/" target="_blank">Medium</NuxtLink> / <NuxtLink class="my-link" to="https://qiita.com/FollowTheDarkside" target="_blank">Qiita</NuxtLink><br>
-            Code: <NuxtLink class="my-link" to="https://github.com/FollowTheDarkside" target="_blank">GitHub</NuxtLink><br>
+            <span class="text-sm">SNS: </span><NuxtLink class="my-link" to="https://twitter.com/eatora22" target="_blank">Twitter</NuxtLink> / <NuxtLink class="my-link" to="https://www.instagram.com/followthedarkside/" target="_blank">Instagram</NuxtLink><br>
+            <span class="text-sm">Video: </span><NuxtLink class="my-link" to="https://www.youtube.com/c/FTD22" target="_blank">YouTube</NuxtLink> / <NuxtLink class="my-link" to="https://vimeo.com/user118759981" target="_blank">Vimeo</NuxtLink><br>
+            <span class="text-sm">Writing: </span><NuxtLink class="my-link" to="https://hahaeatora.hateblo.jp/" target="_blank">HatenaBlog</NuxtLink> / <NuxtLink class="my-link" to="https://note.com/hahaeatora/" target="_blank">note</NuxtLink> / <NuxtLink class="my-link" to="https://followthedarkside.medium.com/" target="_blank">Medium</NuxtLink> / <NuxtLink class="my-link" to="https://qiita.com/FollowTheDarkside" target="_blank">Qiita</NuxtLink><br>
+            <span class="text-sm">Code: </span><NuxtLink class="my-link" to="https://github.com/FollowTheDarkside" target="_blank">GitHub</NuxtLink><br>
         </p>
     </div>
    
