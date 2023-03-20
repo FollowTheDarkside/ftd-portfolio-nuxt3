@@ -7,7 +7,8 @@
           I am also open to contact for collaborative productions and research.
         </p>
         <p class="mb-10">
-          映像制作や開発、執筆のご依頼はこちらから。 共同制作・研究のご連絡もお待ちしております。
+          映像制作や開発、執筆のご依頼はこちらから。 共同制作・研究のご連絡もお待ちしております
+          （参考：<NuxtLink class="my-link" to="https://elite-amphibian-dde.notion.site/49020f2e00a74494b8c1f364c1a0976d" target="_blank">ご依頼について</NuxtLink>）。
         </p>
         <!-- <div class="flex justify-center">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScAjBGyT6kReNQoFJbpY1Cp68Kex-ryzh9MOZi5kHJMDZdM7Q/viewform?embedded=true" width="640" height="840" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
