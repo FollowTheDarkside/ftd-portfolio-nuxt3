@@ -2,6 +2,7 @@
 uniform float time;
 uniform float longestDist;
 uniform float shift;
+uniform sampler2D tex;
 
 varying vec4 vMvPosition;
 varying vec3 vPosition;
@@ -51,11 +52,12 @@ void main() {
     vec3 color = vec3(1.0);
     color = hsv2rgb(vColor);
     
-    float opacity = 1.0;
+    float opacity = 0.75;
     //opacity = 1.0 - distance(vec3(0.0), vPosition) / (longestDist*0.5*(1.001+sin(radians(time*2.0))));
 
     float hueShift = time * (1.0 + shift);
     color = hueShiftYIQ(color, -(sin(radians(hueShift))) * 2.0 * PI);
     
-    gl_FragColor = vec4(color, opacity);
+    //gl_FragColor = vec4(color, opacity);
+    gl_FragColor = vec4(color, opacity)* texture2D(tex, gl_PointCoord);
 }

@@ -52,7 +52,7 @@ export default class Shape{
                             vertices.push(a*expandValue, b*expandValue, c*expandValue);
                             //colors.push((fractalWidth+c)/(fractalWidth*2), 1, 1);
                             //colors.push(0.0, 0.0, currentDist/(fractalWidth*expandValue));
-                            colors.push(currentDist/(fractalWidth*expandValue), 0.25, 1.0); // for HSV
+                            colors.push(currentDist/(fractalWidth*expandValue), 0.5, 2.0); // for HSV
                         }
                     }
                 }
@@ -86,9 +86,9 @@ export default class Shape{
             canvas.width = 128;
             canvas.height = 128;
             grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 0, canvas.width/2, canvas.height/2, canvas.width/2);
-            grad.addColorStop(0,   'rgba(50,50,50,1.0)');
-            grad.addColorStop(0.1, 'rgba(75,75,75,0.7)');
-            grad.addColorStop(0.2, 'rgba(100,100,100,0.3)');
+            grad.addColorStop(0,   'rgba(100,100,100,1.0)');
+            grad.addColorStop(0.3, 'rgba(125,125,125,0.7)');
+            grad.addColorStop(0.6, 'rgba(150,150,150,0.3)');
             grad.addColorStop(1,   'rgba(250,250,250,0.0)');
             ctx.fillStyle = grad;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -118,10 +118,10 @@ export default class Shape{
                 type: 'f',
                 value: 0
             },
-            // texture: {
-            //     type: 't',
-            //     value: hoge
-            // }
+            tex: {
+                type: 't',
+                value: createTexture()
+            }
         };
 
         // Set shader material
