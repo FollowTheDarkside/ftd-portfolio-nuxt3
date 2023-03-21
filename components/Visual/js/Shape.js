@@ -76,6 +76,30 @@ export default class Shape{
             this.prevShift = window.pageYOffset;
         });
 
+        // Create texture for points
+        const createTexture =  function() {
+            let canvas = document.createElement('canvas');
+            let ctx = canvas.getContext('2d');
+            let grad = null;
+            let texture = null;
+         
+            canvas.width = 128;
+            canvas.height = 128;
+            grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 0, canvas.width/2, canvas.height/2, canvas.width/2);
+            grad.addColorStop(0,   'rgba(50,50,50,1.0)');
+            grad.addColorStop(0.1, 'rgba(75,75,75,0.7)');
+            grad.addColorStop(0.2, 'rgba(100,100,100,0.3)');
+            grad.addColorStop(1,   'rgba(250,250,250,0.0)');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fill();
+         
+            texture = new THREE.Texture(canvas);
+            texture.minFilter = THREE.NearestFilter;
+            texture.needsUpdate = true;
+            return texture;
+        };
+
         // Set uniform variable
         this.uniforms = {
             time: {
