@@ -20,9 +20,11 @@ export default defineNuxtConfig({
             title: 'FOLLOW THE DARKSIDE',
             meta: [
                 { name: 'description', content: 'FTD Portfolio' },
+                { property: 'og:url', content: 'https://followthedarkside.com/' },
                 { property: 'og:type', content: 'website' },
                 { property: 'og:site_name', content: 'FOLLOW THE DARKSIDE' },
                 { property: 'og:image', content: 'https://followthedarkside.com/image/about/ftd-mirror.jpg' },
+                { name: 'twitter:card', content: 'summary' },
             ],
             link: [
                 { rel: 'icon', href: '/favicon.ico' },
