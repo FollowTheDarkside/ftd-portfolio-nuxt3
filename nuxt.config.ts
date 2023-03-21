@@ -23,6 +23,8 @@ export default defineNuxtConfig({
                 { property: 'og:url', content: 'https://followthedarkside.com/' },
                 { property: 'og:type', content: 'website' },
                 { property: 'og:site_name', content: 'FOLLOW THE DARKSIDE' },
+                { property: 'og:title', content: 'FOLLOW THE DARKSIDE' },
+                { property: 'og:description', content: 'FTD Portfolio' },
                 { property: 'og:image', content: 'https://followthedarkside.com/image/about/ftd-mirror.jpg' },
                 { name: 'twitter:card', content: 'summary' },
             ],
