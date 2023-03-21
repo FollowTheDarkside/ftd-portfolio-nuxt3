@@ -22,7 +22,7 @@ export default defineNuxtConfig({
                 { name: 'description', content: 'FTD Portfolio' },
                 { property: 'og:type', content: 'website' },
                 { property: 'og:site_name', content: 'FOLLOW THE DARKSIDE' },
-                { property: 'og:image', content: '/public/image/about/ftd-mirror.jpg', },
+                { property: 'og:image', content: '/image/about/ftd-mirror.jpg' },
             ],
             link: [
                 { rel: 'icon', href: '/favicon.ico' },
