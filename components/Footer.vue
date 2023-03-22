@@ -7,7 +7,7 @@
     <p>©2023 FollowTheDarkside</p>
   </div>
   <div class="table-cell text-right text-sm">
-    <a class="hover:text-gray-400 duration-150" id="button-transparent">TP</a>
+    <a class="cursor-pointer opacity-0 hover:opacity-100 duration-150" id="button-transparent">TP</a>
   </div>
 </div>
 </template>
@@ -27,9 +27,6 @@
     // text-align: center;
     display: table; 
     width: 100%;
-}
-#button-transparent{
-  cursor: pointer;
 }
 </style>
 
