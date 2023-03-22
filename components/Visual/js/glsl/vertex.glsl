@@ -3,6 +3,7 @@ attribute vec3 color;
 
 uniform float time;
 uniform float size;
+uniform float scale;
 uniform float longestDist;
 
 varying vec4 vMvPosition;
@@ -10,7 +11,7 @@ varying vec3 vPosition;
 varying vec3 vColor;
 
 void main() {
-    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+    vec4 mvPosition = modelViewMatrix * vec4(position * scale, 1.0);
     vMvPosition = mvPosition;
     vPosition = position;
     vColor = color;

@@ -1,7 +1,7 @@
 <template>
 <div class="my-footer">
   <div class="table-cell text-left text-sm">
-    <a class="cursor-help line-through text-gray-400 opacity-0 hover:opacity-100 ease-in duration-[5000ms]">DB</a>
+    <a class="cursor-pointer opacity-0 hover:opacity-100 duration-150" id="button-transform">TF</a>
   </div>
   <div class="table-cell text-center text-sm">
     <p>©2023 FollowTheDarkside</p>
@@ -56,6 +56,15 @@ export default {
       for(let i = 0; i < sketches.length; i++) {
         sketches[i].classList.toggle("clear");
       }
+    }, { passive: true });
+
+    // Set background visual transform interaction
+    let btnTf = document.getElementById("button-transform");
+    btnTf.addEventListener("mousedown", () => {
+      this.$bus.$emit("TRANSFORM", true);
+    }, { passive: true });
+    btnTf.addEventListener("mouseup", () => {
+      this.$bus.$emit("TRANSFORM", false);
     }, { passive: true });
   },
   destroyed() {

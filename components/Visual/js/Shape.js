@@ -12,6 +12,11 @@ export default class Shape{
     init(){
         console.log("Three.js shape init...")
 
+        const nuxtApp = useNuxtApp()
+        nuxtApp.$bus.$on("TRANSFORM", this.onTransform.bind(this));
+        this.pointSizeTarget = 15.0;
+        this.pointScaleTarget = 1.0;
+
         const fractalWidth = 5;
         const fractalMesh = 120;
         const fractalStep = 2*fractalWidth/fractalMesh;
@@ -110,6 +115,10 @@ export default class Shape{
                 type: 'f',
                 value: 15.0
             },
+            scale: {
+                type: 'f',
+                value: 1.0
+            },
             longestDist: {
                 type: 'f',
                 value: longestDist
@@ -147,6 +156,10 @@ export default class Shape{
         if(this.shift<0) this.shift = 0;
         this.uniforms.shift.value = this.shift*0.0002;
 
+        let interpolationFactor = 0.01;
+        this.uniforms.size.value = THREE.MathUtils.lerp(this.uniforms.size.value, this.pointSizeTarget, interpolationFactor);
+        this.uniforms.scale.value = THREE.MathUtils.lerp(this.uniforms.scale.value, this.pointScaleTarget, interpolationFactor);
+
         // this.mesh.geometry.attributes.position.needsUpdate = true;
         // this.mesh.geometry.attributes.color.needsUpdate = true;
     }
@@ -172,5 +185,16 @@ export default class Shape{
 
     getDistance(x1, y1, z1, x2, y2, z2){
         return Math.sqrt( Math.pow( x2-x1, 2 ) + Math.pow( y2-y1, 2 ) + Math.pow( z2-z1, 2 )) 
+    }
+
+    onTransform(isEnabled){
+        //console.log("onTransform:", isEnabled);
+        if(isEnabled){
+            this.pointSizeTarget = 20.0;
+            this.pointScaleTarget = 5.0;
+        }else{
+            this.pointSizeTarget = 15.0;
+            this.pointScaleTarget = 1.0;
+        }
     }
 }
