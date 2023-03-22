@@ -27,6 +27,7 @@ export default defineNuxtConfig({
                 { hid: 'og:description', property: 'og:description', content: 'FTD Portfolio' },
                 { hid: 'og:image', property: 'og:image', content: 'https://followthedarkside.com/image/about/ftd-mirror.jpg' },
                 { name: 'twitter:card', content: 'summary' },
+                { name: 'twitter:title', content: 'FOLLOW THE DARKSIDE' },
             ],
             link: [
                 { rel: 'icon', href: '/favicon.ico' },
