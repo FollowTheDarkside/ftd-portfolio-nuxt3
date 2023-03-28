@@ -117,7 +117,7 @@ export default class Shape{
             },
             scale: {
                 type: 'f',
-                value: 1.0
+                value: 0.0 //Scale up when init finishes and update is called for the first time, for the performance when the page is loaded for the first time.
             },
             longestDist: {
                 type: 'f',
