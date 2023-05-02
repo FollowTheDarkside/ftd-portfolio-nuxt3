@@ -3,28 +3,11 @@
     <div class="main-text w-5/6 md:w-1/2 2xl:w-1/3 mx-auto">
         <h1 class="text-3xl pt-5 text-center">ABOUT</h1>
         <div id="icon-area" >
-            <!-- Simple icon & For opacity interaction -->
-            <!-- <img 
+            <nuxt-img preload  
                 id="profile-icon"
                 class="w-1/2 md:w-1/2 xl:w-1/3 my-5 rounded-lg"
-                src="~/assets/image/ftd-mirror.jpg" 
-                alt="ftd"
-            /> -->
-            <!-- For simple gif interaction -->
-            <!-- <img class="w-1/2 md:w-1/2 xl:w-1/3 my-5 rounded-lg" 
-                src="/image/about/000001.jpg" 
-                alt="ftd-icon" 
-                onmouseover="this.src='/image/about/FTD-icon-displace.gif'" 
-                onmouseout="this.src='/image/about/000001.jpg'"
-            /> -->
-            <!-- For gif hover interaction -->
-            <nuxt-img preload class="w-1/2 md:w-1/2 xl:w-1/3 my-5 rounded-lg" 
-                src="/image/about/FTD-icon-displace.gif"
-                alt="ftd-icon" 
-            />
-            <nuxt-img preload class="w-1/2 md:w-1/2 xl:w-1/3 my-5 rounded-lg" 
-                src="/image/about/FTD-icon-000001.jpg" 
-                alt="ftd-icon" 
+                src="/image/about/ftd-mirror.jpg" 
+                alt="ftd-icon"
             />
         </div>
         <p class="text-center mb-16">
@@ -65,38 +48,25 @@
 </div>
 </template>
 <style lang="scss" scoped>
-// #profile-icon{
-//     cursor: pointer;
-//     //background: rgba(250, 0, 250, 0.9);
-//     //border-radius: 0.5rem;
-//     opacity: 1.0;
-//     display: block;
-//     transition: .3s ease-out;
-// }
-// [v-cloak] {
-//   display: none;
-// }
 #icon-area {
     display: flex;
     justify-content: center;
 	position: relative;
 	//height: 100%;
-    img{
+    #profile-icon{
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        -moz-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        //pointer-events: none;
+        //background: rgba(250, 0, 250, 0.9);
+        //border-radius: 0.5rem;
+        opacity: 1.0;
         display: block;
-        //position: absolute;
         aspect-ratio: 1 / 1;
-        opacity: 1;
         transition: .3s ease-out;
-    }
-    img:nth-of-type(1) {
-        left: 0%;
-        position: relative;
-	    //opacity: 0.0;
-    }
-    img:nth-of-type(2) {
-        //left: 0%;
-        position: absolute;
-	    //opacity: 0;
+        transform: translateX(0);
     }
     .notdisp{
         opacity: 0.0;
@@ -127,6 +97,7 @@ export default {
         return {
             iconOpacity: 1.0,
             timerID: 0,
+            iconPosX: 0,
         }
     },
     computed: {
@@ -135,48 +106,26 @@ export default {
         //console.log("ABOUT mounted....");
         this.$nextTick(() =>  {
             setTimeout(() =>  {
-                // // Set icon image interaction (Effects that gradually disappear while the mouse is pressed)
-                // let icon = document.getElementById("profile-icon");
-                // icon.addEventListener("mousedown", () => {
-                //     this.timerID = setInterval(this.reduceIconOpacity.bind(this), 100);
-                // }, { passive: true });
-                // icon.addEventListener("mouseup", () => {
-                //     clearInterval(this.timerID);
-                // }, { passive: true });
-
-                // Set icon image interaction (Play GIF on hover)
-                let icon = document.getElementById("icon-area");
-                if(icon.children.length>0){
-                    //console.log("img2:", icon.lastElementChild)
-                    let iconImg = icon.lastElementChild;
-                    iconImg.addEventListener("mouseenter", () => {
-                        //console.log("enter...")
-                        for (let i = 0; i < icon.children.length; i++) {
-                            if(icon.children[i].tagName == "IMG"){
-                                if(i==0){
-                                    icon.children[i].src = "/image/about/FTD-icon-displace.gif"
-                                    clearTimeout(this.timerID);
-                                }else{
-                                    icon.children[i].classList.add("notdisp");
-                                }
-                            }
-                        }
-                    }, { passive: true });
-                    iconImg.addEventListener("mouseleave", () => {
-                        //console.log("leave...")
-                        for (let i = 0; i < icon.children.length; i++) {
-                            if(icon.children[i].tagName == "IMG"){
-                                if(i==0){
-                                    this.timerID = setTimeout(() =>  {
-                                        icon.children[i].src = "/image/about/000001.jpg"
-                                    }, 300); // img transition time
-                                }else{
-                                    icon.children[i].classList.remove("notdisp");
-                                }
-                            }
-                        }
-                    }, { passive: true });
-                }
+                // Set icon image interaction
+                let icon = document.getElementById("profile-icon");
+                icon.addEventListener("mousedown", e => {
+                    let posX = e.pageX;
+                    let clientRect = icon.getBoundingClientRect();
+                    let clientCenterX = (clientRect.right+clientRect.left)/2+window.pageXOffset;
+                    let clickedRightOfElment = posX > clientCenterX ? true : false;
+                    this.moveIcon(clickedRightOfElment);
+                }, { passive: true });
+                icon.addEventListener("touchstart", e => {
+                    e.preventDefault();
+                    let posX = e.touches[0].pageX;
+                    let clientRect = icon.getBoundingClientRect();
+                    let clientCenterX = (clientRect.right+clientRect.left)/2+window.pageXOffset;
+                    let clickedRightOfElment = posX > clientCenterX ? true : false;
+                    this.moveIcon(clickedRightOfElment);
+                }, { passive: true });
+                icon.oncontextmenu = () => {
+                    return false;
+                };
             }, 600); // Wait for page transition
         });
     },
@@ -186,6 +135,11 @@ export default {
             this.iconOpacity -= 0.1;
             if(this.iconOpacity < 0)this.iconOpacity=0.0;
             document.getElementById("profile-icon").style.opacity = this.iconOpacity; 
+        },
+        moveIcon(clickedRightOfElment){
+            let disp = window.innerWidth / 5;
+            this.iconPosX += clickedRightOfElment ? -disp : disp;
+            document.getElementById("profile-icon").style.transform = 'translateX(' + (this.iconPosX) + 'px)';
         },
     }
 }
