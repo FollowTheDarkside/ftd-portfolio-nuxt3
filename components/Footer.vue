@@ -1,13 +1,13 @@
 <template>
 <div class="my-footer">
   <div class="table-cell text-left text-sm">
-    <a class="cursor-pointer opacity-0 hover:opacity-100 duration-150" id="button-transform">TF</a>
+    <a class="btn-footer cursor-pointer opacity-0 active:opacity-100 duration-150" id="button-transform">TF</a>
   </div>
   <div class="table-cell text-center text-sm">
     <p>©2023 FollowTheDarkside</p>
   </div>
   <div class="table-cell text-right text-sm">
-    <a class="cursor-pointer opacity-0 hover:opacity-100 duration-150" id="button-transparent">TP</a>
+    <a class="btn-footer cursor-pointer opacity-0 active:opacity-100 duration-150" id="button-transparent">TP</a>
   </div>
 </div>
 </template>
@@ -28,6 +28,12 @@
     display: table; 
     width: 100%;
 }
+.btn-footer{
+  -webkit-touch-callout: none;
+  -moz-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 </style>
 
 <script>
@@ -43,16 +49,9 @@ export default {
   mounted () {
     console.log("Fotter mounted...");
 
-    document.getElementById("button-transparent").addEventListener("click",function () {
+    document.getElementById("button-transparent").addEventListener("click", () => {
       // console.log("button-transparent clicked...");
-      const contents = document.getElementsByClassName("main-text");
-      for(let i = 0; i < contents.length; i++) {
-        contents[i].classList.toggle("transparent");
-      }
-      const sketches = document.getElementsByClassName("sketch");
-      for(let i = 0; i < sketches.length; i++) {
-        sketches[i].classList.toggle("clear");
-      }
+      this.toggleContentsTransparent()
     }, { passive: true });
 
     // Set background visual transform interaction
@@ -63,10 +62,28 @@ export default {
     btnTf.addEventListener("mouseup", () => {
       this.$bus.$emit("TRANSFORM", false);
     }, { passive: true });
+    btnTf.addEventListener("touchstart", e => {
+      e.preventDefault();
+      this.$bus.$emit("TRANSFORM", true);
+    }, { passive: true });
+    btnTf.addEventListener("touchend", e => {
+      e.preventDefault();
+      this.$bus.$emit("TRANSFORM", false);
+    }, { passive: true });
   },
   destroyed() {
   },
   methods: {
+    toggleContentsTransparent(){
+      const contents = document.getElementsByClassName("main-text");
+      for(let i = 0; i < contents.length; i++) {
+        contents[i].classList.toggle("transparent");
+      }
+      const sketches = document.getElementsByClassName("sketch");
+      for(let i = 0; i < sketches.length; i++) {
+        sketches[i].classList.toggle("clear");
+      }
+    },
   }
 }
 </script>
