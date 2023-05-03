@@ -1,4 +1,6 @@
-# Nuxt 3 Minimal Starter
+# FTD Web Portfolio by Nuxt3
+
+Portfolio is [here](https://followthedarkside.com/). And [this](https://followthedarkside.medium.com/create-a-portfolio-with-nuxt3-tailwind-css-three-js-6b5a8041b235) is the making article.
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -39,4 +41,10 @@ Locally preview production build:
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+If you actually host my project, please use the following command to perform a static build (pre-rendering). This is done automatically with GitHub Actions.
+
+```bash
+npx nuxi generate
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information. I also referenced [this article](https://developer.mamezou-tech.com/nuxt/nuxt3-rendering-mode/).
