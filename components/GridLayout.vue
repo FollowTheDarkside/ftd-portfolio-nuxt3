@@ -46,6 +46,10 @@ $notFocusSize: 80%;
     //background-color: rgba(240, 0, 0, 0.5);
 	position: relative;
 	cursor: pointer;
+    -webkit-touch-callout: none;
+    -moz-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
     .focused{
         top: 0%;
         left: 0%;
@@ -107,61 +111,32 @@ export default {
     // })
 
     // Wait for DOM update to complete
-    this.$nextTick(function() {
+    this.$nextTick(() => {
         console.log("TOP: DOM update completed...");
          // Wait for page transition
-        setTimeout(function() {
+        setTimeout(() => {
             // console.log("setTimeout...");
             let works = document.querySelectorAll(".work-focus");
 
             // Add Work Thumbnail Animation
-            works.forEach(function(work) {
-                work.addEventListener('mouseenter', function() {
+            works.forEach(work => {
+                // Add mouse event
+                work.addEventListener('mouseenter', () => {
                     //console.log("work-id:", work.id);
-                    // Set hover animation
-                    for (let i = 0; i < work.children.length; i++) {
-                        //console.log("tagName:",work.children[i].tagName)
-                        if(work.children[i].tagName == "IMG"){
-                            work.children[i].classList.add("focused");
-                            // Make the image before enter invisible
-                            if(i>0)work.children[i].classList.add("notdisp");
-                        }
-                    }
-                    // Set not hover animation
-                    works.forEach(function(w) {
-                        if(w.id != work.id){
-                            for (let i = 0; i < w.children.length; i++) {
-                                if(work.children[i].tagName == "IMG"){
-                                    //console.log(i, work.children[i].tagName);
-                                    w.children[i].classList.add("notfocused");
-                                }
-                            }
-                        }
-                        
-                    });
+                    this.setWorkThumbnailAnimation(true, work, works);
+                }, { passive: true });
+                work.addEventListener('mouseleave', () => {
+                    this.setWorkThumbnailAnimation(false, work, works);
                 }, { passive: true });
 
-                work.addEventListener('mouseleave', function() {
-                    // Set hover animation
-                    for (let i = 0; i < work.children.length; i++) {
-                        if(work.children[i].tagName == "IMG"){
-                            work.children[i].classList.remove("focused");
-                            // Make the image before enter invisible
-                            if(i>0)work.children[i].classList.remove("notdisp");
-                        }
-                    }
-                    // Set not hover animation
-                    works.forEach(function(w) {
-                        if(w.id != work.id){
-                            for (let i = 0; i < w.children.length; i++) {
-                                if(work.children[i].tagName == "IMG"){
-                                    //console.log(i, work.children[i].tagName);
-                                    w.children[i].classList.remove("notfocused");
-                                }
-                            }
-                        }
-                        
-                    });
+                // Add touch event
+                work.addEventListener('touchstart', e => {
+                    e.preventDefault();
+                    this.setWorkThumbnailAnimation(true, work, works);
+                }, { passive: true });
+                work.addEventListener('touchend', e => {
+                    e.preventDefault();
+                    this.setWorkThumbnailAnimation(false, work, works);
                 }, { passive: true });
             });
         }, 600); // Wait for page transition
@@ -171,39 +146,40 @@ export default {
     console.log("TOP unmounted...");
   },
   methods: {
-    // addWorkThumbnailAnimation(isMouseEntered){
-    //     let eventType = isMouseEntered ? "mouseenter" : "mouseleave";
-    //     let works = document.querySelectorAll(".work-focus");
-    //     works.forEach(function(work) {
-    //         work.addEventListener(eventType, function() {
-    //             console.log("work-id:", work.id);
-    //             // Set hover animation
-    //             for (let i = 0; i < work.children.length; i++) {
-    //                 if (isMouseEntered) {
-    //                     work.children[i].classList.add("focused");
-    //                     if(i>0)work.children[i].classList.add("notdisp");
-    //                 } else {
-    //                     work.children[i].classList.remove("focused");
-    //                     if(i>0)work.children[i].classList.remove("notdisp");
-    //                 }
-    //             }
+    setWorkThumbnailAnimation(isAdded, work, works){
+        // Set hover animation
+        for (let i = 0; i < work.children.length; i++) {
+            //console.log("tagName:",work.children[i].tagName)
+            if(work.children[i].tagName == "IMG"){
+                if(isAdded){
+                    work.children[i].classList.add("focused");
+                    // Make the image before enter invisible
+                    if(i>0)work.children[i].classList.add("notdisp");
+                }else{
+                    work.children[i].classList.remove("focused");
+                    // Make the image before enter invisible
+                    if(i>0)work.children[i].classList.remove("notdisp");
+                }
+            }
+        }
 
-    //             // Set not hover animation
-    //             works.forEach(function(w) {
-    //                 if(w.id != work.id){
-    //                     for (let i = 0; i < w.children.length; i++) {
-    //                         if (isMouseEntered) {
-    //                             w.children[i].classList.add("notfocused");
-    //                         } else {
-    //                             w.children[i].classList.remove("notfocused");
-    //                         }
-                            
-    //                     }
-    //                 }
-    //             });
-    //         }, { passive: true });
-    //     });
-    // },
+        // Set not hover animation
+        works.forEach(function(w) {
+            if(w.id != work.id){
+                for (let i = 0; i < w.children.length; i++) {
+                    if(work.children[i].tagName == "IMG"){
+                        //console.log(i, work.children[i].tagName);
+                        if(isAdded){
+                            w.children[i].classList.add("notfocused");
+                        }else{
+                            w.children[i].classList.remove("notfocused");
+                        }
+                    }
+                }
+            }
+        });
+        
+    },
   }
 }
 </script>
