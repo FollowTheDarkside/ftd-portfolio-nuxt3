@@ -40,7 +40,7 @@
         <h2 class="text-2xl mb-5">Develop / Tool</h2>
         <p class="mb-10">
             <NuxtLink class="my-link" to="https://github.com/FollowTheDarkside/touchdesigner-utils" target="_blank">TouchDesigner Utils</NuxtLink><br>
-            <NuxtLink class="my-link" to="https://github.com/FollowTheDarkside/threejs-webcam-particle-visualizer" target="_blank">threejs-wabcam-particle-visualizer</NuxtLink><br>
+            <NuxtLink class="my-link" to="https://github.com/FollowTheDarkside/vite-ts-web-sketches" target="_blank">vite-ts-web-sketches</NuxtLink><br>
             <NuxtLink class="my-link" to="https://github.com/FollowTheDarkside/SensorDataRecorder" target="_blank">Sensor Data Recorder</NuxtLink><br>
             <NuxtLink class="my-link" to="https://github.com/FollowTheDarkside/Orphe-Music-Controller-Sample" target="_blank">Orphe Music Controller Sample</NuxtLink><br>
         </p>
