@@ -15,11 +15,11 @@
             <span class="date-text">2020-21</span><br>
             <NuxtLink class="my-link" to="https://note.com/thedesignium/m/ma25e9a7c5880" target="_blank">BBOYエンジニア TECHブログ / デザイニウム</NuxtLink><br>
             <span class="date-text">2020/02</span><br>
-            <NuxtLink class="my-link" to="https://www.jstage.jst.go.jp/article/pjsai/JSAI2020/0/JSAI2020_3D5OS22b03/_article/-char/ja/" target="_blank">ブレイクダンスにおける深層学習を用いたダンサーの情動状態の可視化と文化支援</NuxtLink><br>
+            <NuxtLink class="my-link" to="https://www.jstage.jst.go.jp/article/pjsai/JSAI2020/0/JSAI2020_3D5OS22b03/_article/-char/ja/" target="_blank">ブレイクダンスにおける深層学習を用いたダンサーの情動状態の可視化と文化支援 / 第34回 人工知能学会全国大会</NuxtLink><br>
             <span class="date-text">2019/02</span><br>
-            <NuxtLink class="my-link" to="https://www.jstage.jst.go.jp/article/pjsai/JSAI2019/0/JSAI2019_2C1J1203/_article/-char/ja" target="_blank">深層学習を利用したブレイクダンスにおける新しい価値の創出・評価システムの開発</NuxtLink><br>
+            <NuxtLink class="my-link" to="https://www.jstage.jst.go.jp/article/pjsai/JSAI2019/0/JSAI2019_2C1J1203/_article/-char/ja" target="_blank">深層学習を利用したブレイクダンスにおける新しい価値の創出・評価システムの開発 / 第33回 人工知能学会全国大会</NuxtLink><br>
             <span class="date-text">2018/07</span><br>
-            <NuxtLink class="my-link" to="https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&page_id=13&block_id=8&item_id=190839&item_no=1" target="_blank">深層学習を利用したブレイクダンスにおける動作の判別・可視化システムの開発とその応用</NuxtLink><br>
+            <NuxtLink class="my-link" to="https://ipsj.ixsq.nii.ac.jp/ej/index.php?active_action=repository_view_main_item_detail&page_id=13&block_id=8&item_id=190839&item_no=1" target="_blank">深層学習を利用したブレイクダンスにおける動作の判別・可視化システムの開発とその応用 / 第179回ヒューマンコンピュータインタラクション研究会</NuxtLink><br>
         </p>
         <h2 class="text-2xl mb-5">Media / Presentation</h2>
         <p class="mb-10">
