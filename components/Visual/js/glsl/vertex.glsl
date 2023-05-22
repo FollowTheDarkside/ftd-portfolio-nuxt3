@@ -21,7 +21,7 @@ void main() {
 
     //gl_PointSize = size;
     //gl_PointSize = (size + ((1.0+sin(radians(time * 2.0))) * 10.0)) * (100.0 / length(mvPosition.xyz));
-    gl_PointSize = size * (0.5+0.5*cycle) * (1.0-dist/longestDist);
+    gl_PointSize = size * (1.0+0.5*cycle) * (1.0-dist/longestDist);
     
     gl_Position = projectionMatrix * mvPosition;
 }
