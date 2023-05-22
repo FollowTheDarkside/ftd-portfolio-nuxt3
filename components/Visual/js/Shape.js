@@ -18,7 +18,7 @@ export default class Shape{
         this.pointScaleTarget = 1.0;
 
         const fractalWidth = 5;
-        const fractalMesh = 120;
+        const fractalMesh = 100;
         const fractalStep = 2*fractalWidth/fractalMesh;
         const vertices = [];
         const colors = [];
