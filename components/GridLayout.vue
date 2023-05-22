@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-10 grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+    <div class="pt-10 grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3" id="grid-layout">
         <NuxtLink class="work-focus" id="work9" to="/works/work9">
             <nuxt-img preload class="" src="/image/works/work9/work9-2.jpg" alt="work9" />
             <nuxt-img preload class="" src="/image/works/work9/work9-1.jpg" alt="work9" />
@@ -42,6 +42,10 @@
 <style lang="scss" scoped>
 $defaultSize: 90%;
 $notFocusSize: 80%;
+#grid-layout{
+    opacity: 0.0;
+    transition: .3s ease-out;
+}
 .work-focus {
     //background-color: rgba(240, 0, 0, 0.5);
 	position: relative;
@@ -139,6 +143,14 @@ export default {
                     this.setWorkThumbnailAnimation(false, work, works);
                 }, { passive: true });
             });
+
+            // Allow enough time for works thumbnail display
+            setTimeout(() => {
+                let grid = document.getElementById("grid-layout");
+                if (grid !== null) {
+                    grid.style.opacity = 1.0;
+                }
+            }, 600);
         }, 600); // Wait for page transition
     })
   },
