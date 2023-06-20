@@ -1,40 +1,40 @@
 <template>
     <div class="pt-10 grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3" id="grid-layout">
         <NuxtLink class="work-focus" id="work9" to="/works/work9">
-            <nuxt-img preload class="" src="/image/works/work9/work9-2.jpg" alt="work9" />
-            <nuxt-img preload class="" src="/image/works/work9/work9-1.jpg" alt="work9" />
+            <nuxt-img preload class="" src="/image/works/work9/work9-2.webp" alt="work9" />
+            <nuxt-img preload class="" src="/image/works/work9/work9-1.webp" alt="work9" />
         </NuxtLink>
         <NuxtLink class="work-focus" id="work8" to="/works/work8">
-            <nuxt-img preload class="" src="/image/works/work8/work8-2.jpg" alt="work8" />
-            <nuxt-img preload class="" src="/image/works/work8/work8-1.jpg" alt="work8" />
+            <nuxt-img preload class="" src="/image/works/work8/work8-2.webp" alt="work8" />
+            <nuxt-img preload class="" src="/image/works/work8/work8-1.webp" alt="work8" />
         </NuxtLink>
         <NuxtLink class="work-focus" id="work7" to="/works/work7">
-            <nuxt-img preload class="" src="/image/works/work7/work7-2.jpg" alt="work7" />
-            <nuxt-img preload class="" src="/image/works/work7/work7-1.jpg" alt="work7" />
+            <nuxt-img preload class="" src="/image/works/work7/work7-2.webp" alt="work7" />
+            <nuxt-img preload class="" src="/image/works/work7/work7-1.webp" alt="work7" />
         </NuxtLink>
         <NuxtLink class="work-focus" id="work6" to="/works/work6">
-            <nuxt-img preload class="" src="/image/works/work6/work6-2.jpg" alt="work6" />
-            <nuxt-img preload class="" src="/image/works/work6/work6-1.jpg" alt="work6" />
+            <nuxt-img preload class="" src="/image/works/work6/work6-2.webp" alt="work6" />
+            <nuxt-img preload class="" src="/image/works/work6/work6-1.webp" alt="work6" />
         </NuxtLink>
         <NuxtLink class="work-focus" id="work5" to="/works/work5">
-            <nuxt-img preload class="" src="/image/works/work5/work5-2.jpg" alt="work5" />
-            <nuxt-img preload class="" src="/image/works/work5/work5-1.jpg" alt="work5" />
+            <nuxt-img preload class="" src="/image/works/work5/work5-2.webp" alt="work5" />
+            <nuxt-img preload class="" src="/image/works/work5/work5-1.webp" alt="work5" />
         </NuxtLink>
         <NuxtLink class="work-focus" id="work4" to="/works/work4">
-            <nuxt-img preload class="" src="/image/works/work4/work4-2.jpg" alt="work4" />
-            <nuxt-img preload class="" src="/image/works/work4/work4-1.jpg" alt="work4" />
+            <nuxt-img preload class="" src="/image/works/work4/work4-2.webp" alt="work4" />
+            <nuxt-img preload class="" src="/image/works/work4/work4-1.webp" alt="work4" />
         </NuxtLink>
         <NuxtLink class="work-focus" id="work3" to="/works/work3">
-            <nuxt-img preload class="" src="/image/works/work3/work3-2.jpg" alt="work3" />
-            <nuxt-img preload class="" src="/image/works/work3/work3-1.jpg" alt="work3" />
+            <nuxt-img preload class="" src="/image/works/work3/work3-2.webp" alt="work3" />
+            <nuxt-img preload class="" src="/image/works/work3/work3-1.webp" alt="work3" />
         </NuxtLink>
         <NuxtLink class="work-focus" id="work2" to="/works/work2">
-            <nuxt-img preload class="" src="/image/works/work2/work2-2.jpg" alt="work2" />
-            <nuxt-img preload class="" src="/image/works/work2/work2-1.jpg" alt="work2" />
+            <nuxt-img preload class="" src="/image/works/work2/work2-2.webp" alt="work2" />
+            <nuxt-img preload class="" src="/image/works/work2/work2-1.webp" alt="work2" />
         </NuxtLink>
         <NuxtLink class="work-focus" id="work1" to="/works/work1">
-            <nuxt-img preload class="" src="/image/works/work1/work1-2.jpg" alt="work1" />
-            <nuxt-img preload class="" src="/image/works/work1/work1-1.jpg" alt="work1" />
+            <nuxt-img preload class="" src="/image/works/work1/work1-2.webp" alt="work1" />
+            <nuxt-img preload class="" src="/image/works/work1/work1-1.webp" alt="work1" />
         </NuxtLink>
     </div>
 </template>

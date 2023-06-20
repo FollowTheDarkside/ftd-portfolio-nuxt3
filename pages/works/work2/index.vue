@@ -6,7 +6,7 @@
         <div class="flex justify-center" >
             <img 
                 class="my-5 rounded-lg"
-                src="/image/works/work2/STM32_Summit_2019_demo.jpg" 
+                src="/image/works/work2/STM32_Summit_2019_demo.webp" 
                 alt="ftd"
             />
         </div>

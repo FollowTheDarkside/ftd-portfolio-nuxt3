@@ -6,7 +6,7 @@
         <div class="flex justify-center" >
             <img 
                 class="my-5 rounded-lg"
-                src="/image/works/work7/gan-sanpos.jpg" 
+                src="/image/works/work7/gan-sanpos.webp" 
                 alt="ftd"
             />
         </div>
@@ -30,7 +30,7 @@
         <div class="flex justify-center" >
             <img 
                 class="my-5 rounded-lg"
-                src="/image/works/work7/gan-somewhere.jpg" 
+                src="/image/works/work7/gan-somewhere.webp" 
                 alt="ftd"
             />
         </div>
@@ -44,7 +44,7 @@
         <div class="flex justify-center" >
             <img 
                 class="my-5 rounded-lg"
-                src="/image/works/work7/gan-sanpo-ikuta-blackbox.jpg" 
+                src="/image/works/work7/gan-sanpo-ikuta-blackbox.webp" 
                 alt="ftd"
             />
         </div>

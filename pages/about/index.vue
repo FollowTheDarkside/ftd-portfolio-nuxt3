@@ -6,7 +6,7 @@
             <nuxt-img preload  
                 id="profile-icon"
                 class="w-1/2 md:w-1/2 xl:w-1/3 my-5 rounded-lg"
-                src="/image/about/ftd-mirror.jpg" 
+                src="/image/about/ftd-mirror.webp" 
                 alt="ftd-icon"
             />
         </div>
