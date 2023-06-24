@@ -48,7 +48,7 @@ $defaultSize: 90%;
 $notFocusSize: 80%;
 #grid-layout{
     opacity: 0.0;
-    transition: .3s ease-out;
+    transition: .6s ease-out;
 }
 .work-focus {
     //background-color: rgba(240, 0, 0, 0.5);
