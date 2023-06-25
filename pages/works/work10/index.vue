@@ -23,7 +23,8 @@
         </p>
         <p class="my-5">
             人混みが苦手な作者が渋谷の街を散歩しました。
-            その記録と街に対する勝手な解釈を「Processing / p5.js」というプログラミング言語で、良い感じに装飾しZINE にまとめています。        </p>
+            その記録と街に対する勝手な解釈を「Processing / p5.js」というプログラミング言語で良い感じに装飾、ZINE にまとめています。
+        </p>
         <p class="m-5">
             <ul class="list-disc">
                 <li><NuxtLink class="my-link" to="https://www.hikarie8.com/cube/2023/05/pcd-tokyo-2023.shtml" target="_blank">Processing Community Day Tokyo 2023</NuxtLink></li>
