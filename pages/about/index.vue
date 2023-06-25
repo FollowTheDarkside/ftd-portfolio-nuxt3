@@ -5,7 +5,7 @@
         <div id="icon-area" >
             <nuxt-img preload  
                 id="profile-icon"
-                class="w-1/2 md:w-1/2 xl:w-1/3 my-5 rounded-lg"
+                class="w-1/2 md:w-1/2 xl:w-1/3 my-5 rounded-full"
                 src="/image/about/ftd-mirror.webp" 
                 alt="ftd-icon"
             />
@@ -66,7 +66,8 @@
         display: block;
         aspect-ratio: 1 / 1;
         transition: .3s ease-out;
-        transform: translateX(0);
+        transform: translateX(0) rotate(0);
+        //transform: rotate(45deg);
     }
     .notdisp{
         opacity: 0.0;
@@ -98,6 +99,7 @@ export default {
             iconOpacity: 1.0,
             timerID: 0,
             iconPosX: 0,
+            iconDegree: 0,
         }
     },
     computed: {
@@ -139,7 +141,8 @@ export default {
         moveIcon(clickedRightOfElment){
             let disp = window.innerWidth / 5;
             this.iconPosX += clickedRightOfElment ? -disp : disp;
-            document.getElementById("profile-icon").style.transform = 'translateX(' + (this.iconPosX) + 'px)';
+            this.iconDegree += clickedRightOfElment ? -45 : 45;
+            document.getElementById("profile-icon").style.transform = 'translateX(' + (this.iconPosX) + 'px) rotate(' + (this.iconDegree) + 'deg)';
         },
     }
 }
