@@ -31,6 +31,8 @@
             <NuxtLink class="my-link" to="https://www.youtube.com/watch?v=8poKOxl6j8U&t=1640s" target="_blank">TensorFlow.js Community Show & Tell #2</NuxtLink><br>
             <span class="date-text">2019/08</span><br>
             <NuxtLink class="my-link" to="https://www.aps-web.jp/magazine/8118/" target="_blank">APS - 走り始めた“AIシューズ”。STM32マイコンが楽しさを加速。</NuxtLink><br>
+            <span class="date-text">2019/04</span><br>
+            <NuxtLink class="my-link" to="https://blog.st.com/day-1-stm32-summit-product-demonstrations-partner-showcase-and-application-focus-presentations/" target="_blank">STM32 Summit 2019</NuxtLink><br>
             <span class="date-text">2018/12</span><br>
             <NuxtLink class="my-link" to="https://www.sigdance.site/cypher-session-vol-1" target="_blank">SIGDance - Cypher Session vol. 1</NuxtLink><br>
             <span class="date-text">2018/07</span><br>
@@ -38,8 +40,17 @@
         </p>
         <h2 class="text-2xl mb-5">Exibition</h2>
         <p class="mb-10">
+          <span class="date-text">2023/06</span><br>
+            <NuxtLink class="my-link" to="https://processing.jp/event/pcdtokyo2023/" target="_blank">Processing Community Day Tokyo 2023</NuxtLink><br>
             <span class="date-text">2019/11</span><br>
             <NuxtLink class="my-link" to="https://collab.t-kougei.ac.jp/5th-exhibition/" target="_blank">カラボギャラリー第5回企画展-色と対話する展-Talking with Color</NuxtLink><br>
+        </p>
+        <h2 class="text-2xl mb-5">Award</h2>
+        <p class="mb-10">
+          <span class="date-text">2021/12</span><br>
+            <NuxtLink class="my-link" to="https://adaa.jp/ja/winners/winners2021.html" target="_blank">2021アジアデジタルアート大賞展FUKUOKA エンターテインメント（産業応用）部門 優秀賞</NuxtLink><br>
+            <span class="date-text">2018/12</span><br>
+            <NuxtLink class="my-link" to="https://adaa.jp/ja/winners/winners2018.html" target="_blank">2018アジアデジタルアート大賞展FUKUOKA エンターテインメント（産業応用）部門 入賞</NuxtLink><br>
         </p>
         <h2 class="text-2xl mb-5">Develop / Tool</h2>
         <p class="mb-10">
