@@ -4,6 +4,8 @@
         <h1 class="text-3xl pt-5 text-center">INFO</h1>
         <h2 class="text-2xl my-5">Writings</h2>
         <p class="mb-10">
+          <span class="date-text">2023/08</span><br>
+            <NuxtLink class="my-link" to="https://sanpoo.jp/article/sanya-midnight-sanpo/" target="_blank">深夜の東京山谷を散歩する / サンポー</NuxtLink><br>
             <span class="date-text">2023/06</span><br>
             <NuxtLink class="my-link" to="https://sanpoo.jp/article/middle-of-ooimachi-sanpo/" target="_blank">2つの大井町とその中間 / サンポー</NuxtLink><br>
             <span class="date-text">2023/05</span><br>
