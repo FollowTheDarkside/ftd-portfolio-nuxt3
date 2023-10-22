@@ -14,11 +14,11 @@ export default class Shape{
 
         const nuxtApp = useNuxtApp()
         nuxtApp.$bus.$on("TRANSFORM", this.onTransform.bind(this));
-        this.pointSizeTarget = 15.0;
+        this.pointSizeTarget = 5.0;
         this.pointScaleTarget = 1.0;
 
         const fractalWidth = 5;
-        const fractalMesh = 100;
+        const fractalMesh = 75;
         const fractalStep = 2*fractalWidth/fractalMesh;
         const vertices = [];
         const colors = [];
@@ -57,7 +57,7 @@ export default class Shape{
                             vertices.push(a*expandValue, b*expandValue, c*expandValue);
                             //colors.push((fractalWidth+c)/(fractalWidth*2), 1, 1);
                             //colors.push(0.0, 0.0, currentDist/(fractalWidth*expandValue));
-                            colors.push(currentDist/(fractalWidth*expandValue), 0.5, 2.0); // for HSV
+                            colors.push(currentDist/(fractalWidth*expandValue), 0.1, 1.0); // for HSV
                         }
                     }
                 }
@@ -113,7 +113,7 @@ export default class Shape{
             },
             size: {
                 type: 'f',
-                value: 15.0
+                value: 5.0
             },
             scale: {
                 type: 'f',
@@ -190,10 +190,10 @@ export default class Shape{
     onTransform(isEnabled){
         //console.log("onTransform:", isEnabled);
         if(isEnabled){
-            this.pointSizeTarget = 20.0;
+            this.pointSizeTarget = 10.0;
             this.pointScaleTarget = 5.0;
         }else{
-            this.pointSizeTarget = 15.0;
+            this.pointSizeTarget = 5.0;
             this.pointScaleTarget = 1.0;
         }
     }

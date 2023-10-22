@@ -50,7 +50,7 @@ export default {
     position: fixed;
     top: 0;
     z-index: -1;
-    filter: blur(0.2rem);
+    filter: blur(0.05rem);
     transition: .3s ease-out;
   }
   .sketch.clear{
