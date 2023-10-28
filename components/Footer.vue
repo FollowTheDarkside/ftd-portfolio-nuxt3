@@ -1,13 +1,13 @@
 <template>
 <div class="my-footer">
   <div class="table-cell text-left text-sm">
-    <a class="btn-footer cursor-pointer opacity-0 active:opacity-100 duration-150" id="button-transform">TF</a>
+    <a class="btn-footer cursor-pointer opacity-0 active:opacity-100 duration-150" id="button-transform" ref="buttonTransform">TF</a>
   </div>
   <div class="table-cell text-center text-sm">
     <p>©2023 FollowTheDarkside</p>
   </div>
   <div class="table-cell text-right text-sm">
-    <a class="btn-footer cursor-pointer opacity-0 active:opacity-100 duration-150" id="button-transparent">TP</a>
+    <a class="btn-footer cursor-pointer opacity-0 active:opacity-100 duration-150" id="button-transparent" ref="buttonTransparent">TP</a>
   </div>
 </div>
 </template>
@@ -49,13 +49,14 @@ export default {
   mounted () {
     console.log("Fotter mounted...");
 
-    document.getElementById("button-transparent").addEventListener("click", () => {
+    const btnTp = this.$refs.buttonTransparent;
+    btnTp.addEventListener("click", () => {
       // console.log("button-transparent clicked...");
       this.toggleContentsTransparent()
     }, { passive: true });
 
     // Set background visual transform interaction
-    let btnTf = document.getElementById("button-transform");
+    let btnTf = this.$refs.buttonTransform;
     btnTf.addEventListener("mousedown", () => {
       this.$bus.$emit("TRANSFORM", true);
     }, { passive: true });
