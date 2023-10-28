@@ -1,11 +1,11 @@
 <template>
-<header class="header" id="head_wrap">
+<header class="header" id="head_wrap" ref="headWrap">
     <div class="inner">
         <div id="mobile-head">
             <h1 class="logo">
                 <NuxtLink to="/">FTD</NuxtLink>
             </h1>
-            <div id="nav-toggle"> 
+            <div id="nav-toggle" ref="navToggle"> 
                 <div>
                     <span></span>
                     <span></span>
@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-        <nav id="global-nav">
+        <nav id="global-nav" ref="globalNav">
             <ul>
                 <li class=""><NuxtLink to="/">TOP</NuxtLink></li>
                 <li class=""><NuxtLink to="/about">ABOUT</NuxtLink></li>
@@ -271,11 +271,11 @@ export default {
     // );
 
     // Nav Toggle Button
-    document.getElementById("nav-toggle").addEventListener("click",function () {
-        document.getElementById("head_wrap").classList.toggle("open");
+    this.$refs.navToggle.addEventListener("click",() => {
+        this.$refs.headWrap.classList.toggle("open");
     }, { passive: true });
-    document.getElementById("global-nav").addEventListener("click",function () {
-        document.getElementById("head_wrap").classList.toggle("open");
+    this.$refs.globalNav.addEventListener("click",() => {
+        this.$refs.headWrap.classList.toggle("open");
     }, { passive: true });
   },
 };
