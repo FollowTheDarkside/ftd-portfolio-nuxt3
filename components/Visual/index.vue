@@ -1,5 +1,5 @@
 <template>
-  <section class="sketch">
+  <section class="sketch" ref="backgroundSketch">
     <canvas class="sketch__canvas" ref="canvas"></canvas>
   </section>
 </template>
@@ -29,10 +29,8 @@ export default {
       this.$bus.$emit("TRANSITION", _new);
 
       // Remove background blur when moving pages
-      const sketches = document.getElementsByClassName("sketch");
-      for(let i = 0; i < sketches.length; i++) {
-        sketches[i].classList.remove("clear");
-      }
+      const backgroundSketch = this.$refs.backgroundSketch;
+      backgroundSketch.classList.remove("clear");
     }
   },
   unmounted() {
