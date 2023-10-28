@@ -21,7 +21,7 @@
           <label class="form-label form-required" for="field-message">Message</label>
           <textarea class="form-input w-full h-32 p-1 mb-5" id="field-message" name="entry.1999744091" required="required" placeholder="IT'S UP TO YOU!"></textarea>
           <div class="flex justify-center">
-            <button class="form-submit text-center px-5 py-1" id="form-btn" type="submit" name="button">Send</button>
+            <button ref="formBtn" class="form-submit text-center px-5 py-1" id="form-btn" type="submit" name="button">Send</button>
           </div>
         </form>
         <iframe class=""  name="hidden_iframe" id="hidden-iframe"></iframe>
@@ -103,7 +103,7 @@ export default {
             // router.push('/top');
 
             // Disable submit button
-            let btn = document.getElementById("form-btn");
+            let btn = this.$refs.formBtn
             btn.innerText = "Done";
             btn.style.backgroundColor = 'rgba(200, 200, 200, 0.5)'; 
             btn.disabled = true;
