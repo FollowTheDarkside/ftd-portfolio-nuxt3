@@ -4,6 +4,7 @@
         <h1 class="text-3xl pt-5 text-center">ABOUT</h1>
         <div id="icon-area" >
             <nuxt-img preload  
+                ref="profileIcon"
                 id="profile-icon"
                 class="w-1/2 md:w-1/2 xl:w-1/3 my-5 rounded-full"
                 src="/image/about/ftd-mirror.webp" 
@@ -106,43 +107,40 @@ export default {
     },
     mounted () {
         //console.log("ABOUT mounted....");
-        this.$nextTick(() =>  {
-            setTimeout(() =>  {
-                // Set icon image interaction
-                let icon = document.getElementById("profile-icon");
-                icon.addEventListener("mousedown", e => {
-                    let posX = e.pageX;
-                    let clientRect = icon.getBoundingClientRect();
-                    let clientCenterX = (clientRect.right+clientRect.left)/2+window.pageXOffset;
-                    let clickedRightOfElment = posX > clientCenterX ? true : false;
-                    this.moveIcon(clickedRightOfElment);
-                }, { passive: true });
-                icon.addEventListener("touchstart", e => {
-                    e.preventDefault();
-                    let posX = e.touches[0].pageX;
-                    let clientRect = icon.getBoundingClientRect();
-                    let clientCenterX = (clientRect.right+clientRect.left)/2+window.pageXOffset;
-                    let clickedRightOfElment = posX > clientCenterX ? true : false;
-                    this.moveIcon(clickedRightOfElment);
-                }, { passive: true });
-                icon.oncontextmenu = () => {
-                    return false;
-                };
-            }, 600); // Wait for page transition
-        });
+
+        // Set icon image interaction
+        const profileIcon = this.$refs.profileIcon.$el
+        profileIcon.addEventListener("mousedown", e => {
+            let posX = e.pageX;
+            let clientRect = profileIcon.getBoundingClientRect();
+            let clientCenterX = (clientRect.right+clientRect.left)/2+window.pageXOffset;
+            let clickedRightOfElment = posX > clientCenterX ? true : false;
+            this.moveIcon(clickedRightOfElment);
+        }, { passive: true });
+        profileIcon.addEventListener("touchstart", e => {
+            e.preventDefault();
+            let posX = e.touches[0].pageX;
+            let clientRect = profileIcon.getBoundingClientRect();
+            let clientCenterX = (clientRect.right+clientRect.left)/2+window.pageXOffset;
+            let clickedRightOfElment = posX > clientCenterX ? true : false;
+            this.moveIcon(clickedRightOfElment);
+        }, { passive: true });
+        profileIcon.oncontextmenu = () => {
+            return false;
+        };
     },
     methods: {
         reduceIconOpacity(){
             //console.log("iconOpacity:",this.iconOpacity);
             this.iconOpacity -= 0.1;
             if(this.iconOpacity < 0)this.iconOpacity=0.0;
-            document.getElementById("profile-icon").style.opacity = this.iconOpacity; 
+            this.$refs.profileIcon.$el.style.opacity = this.iconOpacity; 
         },
         moveIcon(clickedRightOfElment){
             let disp = window.innerWidth / 5;
             this.iconPosX += clickedRightOfElment ? -disp : disp;
             this.iconDegree += clickedRightOfElment ? -45 : 45;
-            document.getElementById("profile-icon").style.transform = 'translateX(' + (this.iconPosX) + 'px) rotate(' + (this.iconDegree) + 'deg)';
+            this.$refs.profileIcon.$el.style.transform = 'translateX(' + (this.iconPosX) + 'px) rotate(' + (this.iconDegree) + 'deg)';
         },
     }
 }
