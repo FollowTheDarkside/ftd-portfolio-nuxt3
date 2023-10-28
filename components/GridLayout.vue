@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-10 grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3" id="grid-layout">
+    <div class="pt-10 grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3" id="grid-layout" ref="gridLayout">
         <NuxtLink class="work-focus" id="work11" to="/works/work11">
             <nuxt-img preload class="" src="/image/works/work11/work11-2.webp" alt="work11" />
             <nuxt-img preload class="" src="/image/works/work11/work11-1.webp" alt="work11" />
@@ -125,41 +125,39 @@ export default {
     // Wait for DOM update to complete
     this.$nextTick(() => {
         console.log("TOP: DOM update completed...");
-         // Wait for page transition
+        //let works = document.querySelectorAll(".work-focus");
+        const works = this.$el.querySelectorAll(".work-focus");
+
+        // Add Work Thumbnail Animation
+        works.forEach(work => {
+            // Add mouse event
+            work.addEventListener('mouseenter', () => {
+                //console.log("work-id:", work.id);
+                this.setWorkThumbnailAnimation(true, work, works);
+            }, { passive: true });
+            work.addEventListener('mouseleave', () => {
+                this.setWorkThumbnailAnimation(false, work, works);
+            }, { passive: true });
+
+            // Add touch event
+            work.addEventListener('touchstart', e => {
+                e.preventDefault();
+                this.setWorkThumbnailAnimation(true, work, works);
+            }, { passive: true });
+            work.addEventListener('touchend', e => {
+                e.preventDefault();
+                this.setWorkThumbnailAnimation(false, work, works);
+            }, { passive: true });
+        });
+
+        // Allow enough time for works thumbnail display
         setTimeout(() => {
-            // console.log("setTimeout...");
-            let works = document.querySelectorAll(".work-focus");
-
-            // Add Work Thumbnail Animation
-            works.forEach(work => {
-                // Add mouse event
-                work.addEventListener('mouseenter', () => {
-                    //console.log("work-id:", work.id);
-                    this.setWorkThumbnailAnimation(true, work, works);
-                }, { passive: true });
-                work.addEventListener('mouseleave', () => {
-                    this.setWorkThumbnailAnimation(false, work, works);
-                }, { passive: true });
-
-                // Add touch event
-                work.addEventListener('touchstart', e => {
-                    e.preventDefault();
-                    this.setWorkThumbnailAnimation(true, work, works);
-                }, { passive: true });
-                work.addEventListener('touchend', e => {
-                    e.preventDefault();
-                    this.setWorkThumbnailAnimation(false, work, works);
-                }, { passive: true });
-            });
-
-            // Allow enough time for works thumbnail display
-            setTimeout(() => {
-                let grid = document.getElementById("grid-layout");
-                if (grid !== null) {
-                    grid.style.opacity = 1.0;
-                }
-            }, 600);
-        }, 600); // Wait for page transition
+            //let grid = document.getElementById("grid-layout");
+            const grid = this.$refs.gridLayout;
+            if (grid !== null) {
+                grid.style.opacity = 1.0;
+            }
+        }, 600);
     })
   },
   unmounted() {
