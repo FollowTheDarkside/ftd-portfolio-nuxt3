@@ -4,7 +4,7 @@
         <h1 class="text-3xl pt-5 text-center">Dance AI for Beginners</h1>
         <h3 class="text-1xl mt-4 text-center">2018/10</h3>
         <div class="flex justify-center mt-5 mb-10">
-            <iframe class="rounded-lg w-full h-80" src="https://www.youtube.com/embed/fN873xzIX9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="rounded-lg w-full h-80 youtube" data-src="https://www.youtube.com/embed/fN873xzIX9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <p class="my-5">
             In the break dance (bboying) which is spreading widely in recent years, 
@@ -52,4 +52,12 @@ useHead({
     },
   ],
 });
+</script>
+<script>
+export default {
+    mounted () {
+        console.log("work1 mounted...");
+        initYoutubeIframe(this);
+    }
+}
 </script>

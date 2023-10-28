@@ -4,7 +4,7 @@
         <h1 class="text-3xl pt-5 text-center">THE FRESHEST AI</h1>
         <h3 class="text-1xl mt-4 text-center">2021/08</h3>
         <div class="flex justify-center mt-5 mb-10">
-            <iframe class="rounded-lg w-full h-80" src="https://www.youtube.com/embed/RVjdmTPlrQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="rounded-lg w-full h-80 youtube" data-src="https://www.youtube.com/embed/RVjdmTPlrQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <p class="my-5">
             Breakin' is a popular street dance worldwide. One of the reasons it has been so spread is the value of originality. 
@@ -60,4 +60,12 @@ useHead({
     },
   ],
 });
+</script>
+<script>
+export default {
+    mounted () {
+        console.log("work6 mounted...");
+        initYoutubeIframe(this);
+    }
+}
 </script>

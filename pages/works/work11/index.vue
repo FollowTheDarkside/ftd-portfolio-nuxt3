@@ -4,7 +4,7 @@
         <h1 class="text-3xl pt-5 text-center">rum process</h1>
         <h3 class="text-1xl mt-4 text-center">2023/09</h3>
         <div class="flex justify-center mt-5 mb-10">
-            <iframe class="rounded-lg w-full h-80" src="https://www.youtube.com/embed/zl3Q4BYElqE?si=TKfoXvceaDPoLvKC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="rounded-lg w-full h-80 youtube" data-src="https://www.youtube.com/embed/zl3Q4BYElqE?si=TKfoXvceaDPoLvKC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <p class="my-5">
             I made a video of the process of creating my work.
@@ -32,4 +32,12 @@ useHead({
     },
   ],
 });
+</script>
+<script>
+export default {
+    mounted () {
+        console.log("work11 mounted...");
+        initYoutubeIframe(this);
+    }
+}
 </script>

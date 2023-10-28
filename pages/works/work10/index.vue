@@ -31,7 +31,7 @@
             </ul>
         </p>
         <div class="flex justify-center mt-20 mb-5">
-            <iframe class="rounded-lg w-full h-80" src="https://www.youtube.com/embed/xVDSdsx7wm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="rounded-lg w-full h-80 youtube" data-src="https://www.youtube.com/embed/xVDSdsx7wm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
    
@@ -47,4 +47,12 @@ useHead({
     },
   ],
 });
+</script>
+<script>
+export default {
+    mounted () {
+        console.log("work10 mounted...");
+        initYoutubeIframe(this);
+    }
+}
 </script>
