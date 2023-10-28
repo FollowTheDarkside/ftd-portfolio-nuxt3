@@ -57,3 +57,11 @@ p {
 .navbar-menu {
     color: rgba(15, 15, 15, 1);
 }
+
+.youtube{
+    opacity: 0.0;
+    transition: .5s ease-out;
+}
+.youtube.disp{
+    opacity: 1.0;
+}
