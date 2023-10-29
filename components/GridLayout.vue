@@ -157,7 +157,7 @@ export default {
             if (grid !== null) {
                 grid.style.opacity = 1.0;
             }
-        }, 600);
+        }, 1200);
     })
   },
   unmounted() {
