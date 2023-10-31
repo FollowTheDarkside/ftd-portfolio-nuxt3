@@ -10,6 +10,7 @@ class Common{
             windowW: null,
             windowH: null
         };
+        this.windowOuterH = null;
 
         this.clock = null;
 
@@ -70,13 +71,23 @@ class Common{
             windowW: window.innerWidth,
             windowH: window.innerHeight
         }
+        this.windowOuterH = window.outerHeight;
     }
 
     resize(){
-        this.setSize();
-        this.camera.aspect = this.size.windowW / this.size.windowH;
-        this.camera.updateProjectionMatrix();
-        this.renderer.setSize(this.size.windowW, this.size.windowH);
+        /*
+        NOTE: 
+        In Safari on iOS, 
+        resize is called depending on whether the floating address bar is displayed, 
+        and the background visual may move up or down. 
+        This is to ensure that the background does not change depending on the presence or absence of the address bar.
+        */
+        if(window.outerHeight != this.windowOuterH || window.innerWidth != this.size.windowW){
+            this.setSize();
+            this.camera.aspect = this.size.windowW / this.size.windowH;
+            this.camera.updateProjectionMatrix();
+            this.renderer.setSize(this.size.windowW, this.size.windowH);
+        }
     }
 
     render(){
