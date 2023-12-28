@@ -6,7 +6,7 @@
         <div class="flex justify-center" >
             <img 
                 class="my-5 rounded-lg"
-                src="/image/works/work12/work12-1.webp" 
+                src="/image/works/work12/generative-breaking1.webp" 
                 alt="ftd"
             />
         </div>
