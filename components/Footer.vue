@@ -4,7 +4,7 @@
     <a class="btn-footer cursor-pointer opacity-0 active:opacity-100 duration-150" id="button-transform" ref="buttonTransform">TF</a>
   </div>
   <div class="table-cell text-center text-sm">
-    <p>©2023 FollowTheDarkside</p>
+    <p>©2024 FollowTheDarkside</p>
   </div>
   <div class="table-cell text-right text-sm">
     <a class="btn-footer cursor-pointer opacity-0 active:opacity-100 duration-150" id="button-transparent" ref="buttonTransparent">TP</a>
