@@ -8,13 +8,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/image": "^1.0.0",
-    "@nuxt/image-edge": "npm:@nuxt/image-edge@latest",
+    "@nuxt/image": "^1.0.0-rc.3",
     "@nuxtjs/tailwindcss": "^6.3.1",
     "@tailwindcss/typography": "^0.5.9",
     "daisyui": "^2.50.0",
     "mitt": "^3.0.0",
-    "nuxt": "^3.1.2",
+    "nuxt": "^3.9.0",
     "raw-loader": "^4.0.2",
     "sass": "^1.58.0"
   },
