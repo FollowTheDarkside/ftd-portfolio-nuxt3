@@ -42,7 +42,7 @@
             <span class="text-sm">SNS: </span><NuxtLink class="my-link" to="https://twitter.com/eatora22" target="_blank">Twitter</NuxtLink> / <NuxtLink class="my-link" to="https://www.instagram.com/followthedarkside/" target="_blank">Instagram</NuxtLink><br>
             <span class="text-sm">Video: </span><NuxtLink class="my-link" to="https://www.youtube.com/c/FTD22" target="_blank">YouTube</NuxtLink> / <NuxtLink class="my-link" to="https://vimeo.com/user118759981" target="_blank">Vimeo</NuxtLink><br>
             <span class="text-sm">Writing: </span><NuxtLink class="my-link" to="https://hahaeatora.hateblo.jp/" target="_blank">HatenaBlog</NuxtLink> / <NuxtLink class="my-link" to="https://note.com/hahaeatora/" target="_blank">note</NuxtLink> / <NuxtLink class="my-link" to="https://followthedarkside.medium.com/" target="_blank">Medium</NuxtLink> / <NuxtLink class="my-link" to="https://qiita.com/FollowTheDarkside" target="_blank">Qiita</NuxtLink><br>
-            <span class="text-sm">Code: </span><NuxtLink class="my-link" to="https://github.com/FollowTheDarkside" target="_blank">GitHub</NuxtLink><br>
+            <span class="text-sm">Resources: </span><NuxtLink class="my-link" to="https://github.com/FollowTheDarkside" target="_blank">GitHub</NuxtLink> / <NuxtLink class="my-link" to="https://ftd.booth.pm" target="_blank">BOOTH</NuxtLink><br>
         </p>
     </div>
    
