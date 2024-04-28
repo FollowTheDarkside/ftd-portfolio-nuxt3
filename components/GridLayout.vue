@@ -1,5 +1,9 @@
 <template>
     <div class="pt-10 grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3" id="grid-layout" ref="gridLayout">
+        <NuxtLink class="work-focus" id="work13" to="/works/work13">
+            <nuxt-img preload class="" src="/image/works/work13/work13-2.webp" alt="work13" />
+            <nuxt-img preload class="" src="/image/works/work13/work13-1.webp" alt="work13" />
+        </NuxtLink>
         <NuxtLink class="work-focus" id="work12" to="/works/work12">
             <nuxt-img preload class="" src="/image/works/work12/work12-2.webp" alt="work12" />
             <nuxt-img preload class="" src="/image/works/work12/work12-1.webp" alt="work12" />
