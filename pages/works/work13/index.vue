@@ -12,6 +12,7 @@
         <p class="m-5">
             <ul class="list-disc">
                 <li><NuxtLink class="my-link" to="https://aftr0008.tumblr.com/" target="_blank">Acacia=Akasha</NuxtLink></li>
+                <li><NuxtLink class="my-link" to="https://youtu.be/GgDXCX6N37o?si=OaxN84zgci5l4J9H" target="_blank">Lyric Video Prototype</NuxtLink></li>
             </ul>
         </p>
     </div>
