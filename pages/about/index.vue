@@ -18,16 +18,18 @@
         </p>
         <h2 class="text-2xl">Biography</h2>
         <p class="my-5">
-            FTD is a Kanagawa-based artist and bboy. 
+            FTD is a Shonan-based artist and bboy. 
             While making use of his career as a breakdancer and engineer, 
-            he pursues a unique expression that is not bound by tools or environments.
-            In recent years, he has been exploring for new visual expressions using programming and machine learning techniques.
+            he pursues a unique expression that is not bound by tools or environments. In recent years, 
+            he has been exploring for new visual expressions using programming and machine learning techniques, 
+            as well as activities that focus on the process of actions, from creating works to daily meals.
         </p>
         <p class="mb-10">
-            神奈川を拠点として活動するアーティストでありBBOY。
-            ダンサーやエンジニアとしてのキャリアを活かしつつ、
-            ツールや環境に囚われない独自の表現を追求している。
-            近年はプログラミングや機械学習の技術を用いた新しいビジュアル表現を模索中。
+            湘南を拠点として活動するアーティストでありBBOY。 
+            ダンサーやエンジニアとしてのキャリアを活かしつつ、 
+            ツールや環境に囚われない独自の表現を追求している。 
+            近年はプログラミングや機械学習の技術を用いた新しい視覚表現や、
+            作品制作から日々の食事など行動の過程に着目した活動を行なっている。
         </p>
         <p class="mb-10">
             <span class="text-sm">Related:</span><br>
