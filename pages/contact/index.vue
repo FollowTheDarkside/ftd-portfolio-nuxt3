@@ -13,11 +13,11 @@
         <!-- <div class="flex justify-center">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScAjBGyT6kReNQoFJbpY1Cp68Kex-ryzh9MOZi5kHJMDZdM7Q/viewform?embedded=true" width="640" height="840" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
         </div> -->
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAjBGyT6kReNQoFJbpY1Cp68Kex-ryzh9MOZi5kHJMDZdM7Q/formResponse" method="POST" @submit="formSubmited" target="hidden_iframe">
+        <form ref="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAjBGyT6kReNQoFJbpY1Cp68Kex-ryzh9MOZi5kHJMDZdM7Q/formResponse" method="POST" target="hidden_iframe" @submit.prevent="formSubmited">
           <label class="form-label form-required" for="field-name">Name</label>
           <input class="form-input w-full p-1 mb-5" id="field-name" type="text" name="entry.305137816" required="required" placeholder="follow the darkside">
           <label class="form-label form-required" for="field-mail">Mail Address</label>
-          <input class="form-input w-full p-1 mb-5" id="field-mail" type="text" name="entry.545792903" required="required" placeholder="darkside@mail.co.jp">
+          <input ref="fieldMail" class="form-input w-full p-1 mb-5" id="field-mail" type="text" name="entry.545792903" required="required" placeholder="darkside@mail.co.jp">
           <label class="form-label form-required" for="field-message">Message</label>
           <textarea class="form-input w-full h-32 p-1 mb-5" id="field-message" name="entry.1999744091" required="required" placeholder="IT'S UP TO YOU!"></textarea>
           <div class="flex justify-center">
@@ -102,13 +102,26 @@ export default {
             // const router = useRouter();
             // router.push('/top');
 
-            // Disable submit button
-            let btn = this.$refs.formBtn
-            btn.innerText = "Done";
-            btn.style.backgroundColor = 'rgba(200, 200, 200, 0.5)'; 
-            btn.disabled = true;
-            btn.classList.add("btn-disabled");
-            //document.getElementById("hidden-iframe").style.display = "none"; // Prevent display of post-send screen in iframe
+            // Validation for mail address
+            const fMail = this.$refs.fieldMail
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const btn = this.$refs.formBtn
+
+            if (emailPattern.test(fMail.value)){
+              // Disable submit button
+              btn.innerText = "Done";
+              btn.style.backgroundColor = 'rgba(200, 200, 200, 0.5)'; 
+              btn.disabled = true;
+              btn.classList.add("btn-disabled");
+              //document.getElementById("hidden-iframe").style.display = "none"; // Prevent display of post-send screen in iframe
+
+              // Form submit
+              this.$refs.contactForm.submit();
+            } else {
+              let btn = this.$refs.formBtn
+              btn.innerText = "Invalid";
+              btn.style.backgroundColor = 'rgba(240, 40, 40, 1.0)'; 
+            }
         },
     }
 }
