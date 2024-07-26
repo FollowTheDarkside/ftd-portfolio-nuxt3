@@ -155,12 +155,17 @@ export default class Shape{
     }
 
     update(){
-        this.mesh.rotation.y += Common.time.delta*0.25;
-        this.uniforms.time.value += Common.time.delta*2.0;
-
-        this.shift -= 1.0;
-        if(this.shift<0) this.shift = 0;
+        // Update shift param by page scroll
+        this.shift -= 1.5;
+        if(this.shift<0){
+            this.shift = 0;
+        }else if(this.shift>150){
+            this.shift = 150;
+        }
         this.uniforms.shift.value = this.shift*0.0002;
+
+        this.mesh.rotation.y += Common.time.delta*0.25 + this.shift*0.0001;
+        this.uniforms.time.value += Common.time.delta*2.0;
 
         let interpolationFactor = 0.01;
         this.uniforms.size.value = THREE.MathUtils.lerp(this.uniforms.size.value, this.pointSizeTarget, interpolationFactor);
