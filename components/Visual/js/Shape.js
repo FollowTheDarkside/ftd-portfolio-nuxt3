@@ -90,12 +90,18 @@ export default class Shape{
          
             canvas.width = 128;
             canvas.height = 128;
-            grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 0, canvas.width/2, canvas.height/2, canvas.width/2);
-            grad.addColorStop(0,   'rgba(100,100,100,1.0)');
-            grad.addColorStop(0.3, 'rgba(125,125,125,0.7)');
-            grad.addColorStop(0.6, 'rgba(150,150,150,0.3)');
-            grad.addColorStop(1,   'rgba(250,250,250,0.0)');
-            ctx.fillStyle = grad;
+
+            // // For radial gradient
+            // grad = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 0, canvas.width/2, canvas.height/2, canvas.width/2);
+            // grad.addColorStop(0,   'rgba(100,100,100,1.0)');
+            // grad.addColorStop(0.3, 'rgba(125,125,125,0.7)');
+            // grad.addColorStop(0.6, 'rgba(150,150,150,0.3)');
+            // grad.addColorStop(1,   'rgba(250,250,250,0.0)');
+            // ctx.fillStyle = grad;
+
+            // For fill color
+            ctx.fillStyle = 'rgba(100,100,100,1.0)';
+
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.fill();
          
