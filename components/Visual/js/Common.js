@@ -105,11 +105,11 @@ class Common{
         console.log("path:",path);
         switch(path){
             case "index": 
-                this.cameraPositionTarget.value.set(0,0,150);
+                this.cameraPositionTarget.value.set(0,0,100);
                 break;
 
             case "about":
-                this.cameraPositionTarget.value.set(0,0,100);
+                this.cameraPositionTarget.value.set(0,0,75);
                 break;
 
             case "info":
