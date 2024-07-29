@@ -31,6 +31,8 @@
         </p>
         <h2 class="text-2xl mb-5">Media / Presentation</h2>
         <p class="mb-10">
+            <span class="date-text">2024/07</span><br>
+            <NuxtLink class="my-link" to="https://www.tokyo-np.co.jp/article/343471" target="_blank">東京新聞・中日新聞 - ブレイキンをAIが採点「オリジナルのダンスできてる？」 競技経験あるエンジニアと学者が練習システム開発</NuxtLink><br>
             <span class="date-text">2022/12</span><br>
             <NuxtLink class="my-link" to="http://www.sigskl.org/activity/pg146.html" target="_blank">第38回身体知研究会 招待講演「Introduction to DanceAI Project」</NuxtLink><br>
             <span class="date-text">2020/05</span><br>
