@@ -90,6 +90,7 @@ $baseFontWeight: 200;
             a {
                 padding: 2px;
                 box-sizing: border-box;
+                color: ($baseTextColor);
                 font-weight: ($baseFontWeight);
                 position: relative;
                 /* underline animation */
